@@ -11,8 +11,7 @@ class Song < ActiveRecord::Base
     # Drake doesn't exist in the database as an artist yet, so you'll have to create a record
     # Hint: you won't want to create an artist record every time this method is called, only if Drake is *not found*
 
-    Song.find_or_initialize_by(artist: "Drake").update_attributes!(
-      song: "Hotline Bling"
-    )
+    pp self.artist_id
+    # find_or_create_by(name: ) { |song| pp song }
   end
 end
